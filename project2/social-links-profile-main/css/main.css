@@ -6,8 +6,10 @@
   background-color: rgb(29, 27, 27);
   margin: auto;
   border-radius: 0.8em;
-  max-width: 360px;
-  max-height: 600px;
+  max-width: 20em;
+  max-height: 40em;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .content-container {
@@ -60,7 +62,7 @@
 .social-media-button {
   margin-bottom: 1em;
   padding: 1em 3em;
-  width: 23em;
+  width: 21em;
   border-radius: 1em;
   background-color: rgb(46, 42, 42);
   color: white;
