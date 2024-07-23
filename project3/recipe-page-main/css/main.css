@@ -11,6 +11,22 @@
   --ff-secondary: "Young Serif", serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-eggshell);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
