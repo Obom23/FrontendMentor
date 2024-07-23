@@ -1,17 +1,23 @@
+:root {
+  --clr-nutmeg: hsl(14, 45%, 36%);
+  --clr-dark-raspberry: hsl(332, 51%, 32%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-rose-white: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-light-grey: hsl(30, 18%, 87%);
+  --clr-wenge-brown: hsl(30, 10%, 34%);
+  --clr-dark-charcoal: hsl(24, 5%, 18%);
+  --ff-primary: "Outfit", sans-serif;
+  --ff-secondary: "Young Serif", serif;
+}
+
 .container {
-  display: grid;
-  grid-template-columns:
-    repeat(1, minmax(250px, 1fr));
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 1em;
-  margin: auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  max-width: 500px;
   border-radius: 0.5em;
-  width: 40%;
-  min-width: 20em;
 }
 
 .header {
@@ -28,34 +34,39 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5em;
+  font-family: var(--ff-secondary);
 }
 
 .recipe-description {
   line-height: 1.2em;
   margin-bottom: 1em;
+  font-family: var(--ff-primary);
 }
 
 .preparation-time {
-  background-color: rgba(255, 204, 255, 0.5);
+  background-color: var(--clr-rose-white);
   padding: 2em;
   margin-bottom: 2em;
 }
 
 .preparation-time-title {
   font-weight: bold;
-  color: purple;
+  color: var(--clr-dark-raspberry);
   font-size: 1.25rem;
+  font-family: var(--ff-primary);
 }
 
 .preparation-time li {
   padding-left: 1em;
+  font-family: var(--ff-primary);
 }
 
 .preparation-time li::marker {
-  color: purple;
+  color: var(--clr-dark-raspberry);
 }
 
-.preparation-time ul, .ingredients-block ul {
+.preparation-time ul,
+.ingredients-block ul {
   padding-left: 1.5em;
   line-height: 2em;
 }
@@ -71,25 +82,28 @@
 .title {
   font-size: 2rem;
   font-weight: bold;
-  color: brown;
+  color: var(--clr-nutmeg);
+  font-family: var(--ff-secondary);
 }
 
 .ingredients-block li::marker {
-  color: brown;
+  color: var(--clr-nutmeg);
 }
 
 .ingredients-block li {
   padding-left: 1em;
+  font-family: var(--ff-primary);
 }
-
 
 .instructions li {
   padding-left: 1em;
   margin-bottom: 1em;
+  font-family: var(--ff-primary);
 }
 
-.instructions li::marker, .bold-cell {
-  color: brown;
+.instructions li::marker,
+.bold-cell {
+  color: var(--clr-nutmeg);
   font-weight: bold;
 }
 
@@ -101,7 +115,6 @@
   margin-bottom: 2em;
 }
 
-
 .nutrition .title {
   margin-bottom: 0.5em;
 }
@@ -110,11 +123,9 @@
   margin-bottom: 0.5em;
 }
 
-
-
 table tr {
   text-align: left;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--clr-light-grey);
 }
 
 table {
@@ -129,10 +140,10 @@ th {
 }
 
 hr {
+  border-top: 1px solid var(--clr-light-grey);
   margin-bottom: 1.5em;
-  color: rgba(243, 231, 231, 0.5);
 }
 
 .last-row-table {
   border: none;
-}
+}/*# sourceMappingURL=main.css.map */
