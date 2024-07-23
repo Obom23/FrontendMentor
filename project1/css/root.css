@@ -4,14 +4,4 @@
   --clr-medium-blue: hsl(216, 15%, 48%);
   --clr-dark-blue: hsl(218, 44%, 22%);
   --ff-primary: "Outfit";
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background-color: var(--clr-light-blue);
-  font-family: var(--ff-primary);
-}/*# sourceMappingURL=general.css.map */
+}/*# sourceMappingURL=root.css.map */
