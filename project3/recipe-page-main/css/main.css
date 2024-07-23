@@ -1,0 +1,138 @@
+.container {
+  display: grid;
+  grid-template-columns:
+    repeat(1, minmax(250px, 1fr));
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1em;
+  margin: auto;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border-radius: 0.5em;
+  width: 40%;
+  min-width: 20em;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.omelette-picture {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.name-recipe {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.recipe-description {
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+.preparation-time {
+  background-color: rgba(255, 204, 255, 0.5);
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.preparation-time-title {
+  font-weight: bold;
+  color: purple;
+  font-size: 1.25rem;
+}
+
+.preparation-time li {
+  padding-left: 1em;
+}
+
+.preparation-time li::marker {
+  color: purple;
+}
+
+.preparation-time ul, .ingredients-block ul {
+  padding-left: 1.5em;
+  line-height: 2em;
+}
+
+.bold-word {
+  font-weight: bold;
+}
+
+.ingredients-block {
+  margin-bottom: 1.5em;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: brown;
+}
+
+.ingredients-block li::marker {
+  color: brown;
+}
+
+.ingredients-block li {
+  padding-left: 1em;
+}
+
+
+.instructions li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+.instructions li::marker, .bold-cell {
+  color: brown;
+  font-weight: bold;
+}
+
+.instructions ol {
+  padding-left: 1.5em;
+}
+
+.instructions {
+  margin-bottom: 2em;
+}
+
+
+.nutrition .title {
+  margin-bottom: 0.5em;
+}
+
+.nutrition .description {
+  margin-bottom: 0.5em;
+}
+
+
+
+table tr {
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  line-height: 2em;
+  padding-left: 1em;
+  font-weight: 300;
+}
+
+hr {
+  margin-bottom: 1.5em;
+  color: rgba(243, 231, 231, 0.5);
+}
+
+.last-row-table {
+  border: none;
+}
