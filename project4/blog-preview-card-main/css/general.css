@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-size: 1em;
+  font-size: calc(0.875rem, 1rem - 0.2vh, 1rem);
   font-family: var(--ff-primary);
-}/*# sourceMappingURL=general.css.map */
+}
+
+/*# sourceMappingURL=general.css.map */

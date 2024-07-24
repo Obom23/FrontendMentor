@@ -37,16 +37,15 @@
   margin-bottom: 1em;
 }
 
-h1,
-h2 {
+h1 {
+  font-size: 1.5rem;
   font-weight: var(--ff-primary-bold);
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   transition: 0.15s;
   cursor: pointer;
 }
 
-h1:hover,
-h2:hover {
+h1:hover {
   color: var(--clr-yellow);
 }
 
