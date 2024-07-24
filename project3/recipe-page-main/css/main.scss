@@ -12,7 +12,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .omelette-picture {
@@ -20,10 +20,7 @@
   border-radius: 0.5em;
 }
 
-.name-recipe {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5em;
+h1 {
   font-family: var(--ff-secondary);
 }
 
