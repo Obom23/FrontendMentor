@@ -5,12 +5,30 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: var(--clr-yellow);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-size: calc(0.875rem, 1rem - 0.2vh, 1rem);
+  font-size: 1rem;
   font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
 }
