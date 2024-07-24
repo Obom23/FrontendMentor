@@ -1,12 +1,4 @@
-:root {
-  --clr-yellow: hsl(47, 88%, 63%);
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-light-gray: hsl(0, 0%, 42%);
-  --clr-dark-gray: hsl(0, 0%, 7%);
-  --ff-primary: "Figtree";
-  --ff-primary-medium: 500;
-  --ff-primary-bold: 800;
-}
+@use "root";
 
 .container {
   background-color: var(--clr-white);
@@ -77,4 +69,4 @@ h2:hover {
 
 .name {
   font-weight: var(--ff-primary-bold);
-}/*# sourceMappingURL=styles.css.map */
+}

@@ -1,0 +1,16 @@
+@use "root";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1em;
+  font-family: var(--ff-primary);
+}

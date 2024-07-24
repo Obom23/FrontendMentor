@@ -1,0 +1,11 @@
+@use "root";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-light-blue);
+  font-family: var(--ff-primary);
+}

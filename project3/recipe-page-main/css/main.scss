@@ -1,0 +1,139 @@
+@use "root";
+@use "general";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1em;
+  max-width: 500px;
+  border-radius: 0.5em;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.omelette-picture {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.name-recipe {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-family: var(--ff-secondary);
+}
+
+.recipe-description {
+  line-height: 1.2em;
+  margin-bottom: 1em;
+  font-family: var(--ff-primary);
+}
+
+.preparation-time {
+  background-color: var(--clr-rose-white);
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.preparation-time-title {
+  font-weight: bold;
+  color: var(--clr-dark-raspberry);
+  font-size: 1.25rem;
+  font-family: var(--ff-primary);
+}
+
+.preparation-time li {
+  padding-left: 1em;
+  font-family: var(--ff-primary);
+}
+
+.preparation-time li::marker {
+  color: var(--clr-dark-raspberry);
+}
+
+.preparation-time ul,
+.ingredients-block ul {
+  padding-left: 1.5em;
+  line-height: 2em;
+}
+
+.bold-word {
+  font-weight: bold;
+}
+
+.ingredients-block {
+  margin-bottom: 1.5em;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-nutmeg);
+  font-family: var(--ff-secondary);
+}
+
+.ingredients-block li::marker {
+  color: var(--clr-nutmeg);
+}
+
+.ingredients-block li {
+  padding-left: 1em;
+  font-family: var(--ff-primary);
+}
+
+.instructions li {
+  padding-left: 1em;
+  margin-bottom: 1em;
+  font-family: var(--ff-primary);
+}
+
+.instructions li::marker,
+.bold-cell {
+  color: var(--clr-nutmeg);
+  font-weight: bold;
+}
+
+.instructions ol {
+  padding-left: 1.5em;
+}
+
+.instructions {
+  margin-bottom: 2em;
+}
+
+.nutrition .title {
+  margin-bottom: 0.5em;
+}
+
+.nutrition .description {
+  margin-bottom: 0.5em;
+}
+
+table tr {
+  text-align: left;
+  border-bottom: 1px solid var(--clr-light-grey);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  line-height: 2em;
+  padding-left: 1em;
+  font-weight: 300;
+}
+
+hr {
+  border-top: 1px solid var(--clr-light-grey);
+  margin-bottom: 1.5em;
+}
+
+.last-row-table {
+  border: none;
+}

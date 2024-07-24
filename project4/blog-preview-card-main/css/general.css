@@ -19,6 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-size: clamp(14px, 1rem - 0.8vw, 16px);
+  font-size: 1em;
   font-family: var(--ff-primary);
 }/*# sourceMappingURL=general.css.map */
