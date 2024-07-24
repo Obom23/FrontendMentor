@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
     <link
       rel="icon"
       type="image/png"
@@ -20,5 +23,31 @@
 
     <title>Frontend Mentor | Blog preview card</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <img
+        class="illustration-picture"
+        src="assets/images/illustration-article.svg"
+        alt="Illustration Article"
+      />
+
+      <div class="container-content">
+        <button class="learning-btn">Learning</button>
+        <div class="publish-date">Published 21 Dec 2023</div>
+        <h2>HTML & CSS foundations</h2>
+        <div class="content">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </div>
+        <div class="flex">
+          <img
+            class="avatar"
+            src="assets/images/image-avatar.webp"
+            alt="Avatar"
+          />
+          <div class="name">Greg Hooper</div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

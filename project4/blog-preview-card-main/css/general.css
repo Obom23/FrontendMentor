@@ -4,13 +4,20 @@
   --clr-light-gray: hsl(0, 0%, 42%);
   --clr-dark-gray: hsl(0, 0%, 7%);
   --ff-primary: "Figtree";
+  --ff-primary-medium: 500;
+  --ff-primary-bold: 800;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: var(--ff-primary);
 }
 
 body {
   background-color: var(--clr-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }/*# sourceMappingURL=general.css.map */
