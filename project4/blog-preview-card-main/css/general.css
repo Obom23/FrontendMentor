@@ -11,7 +11,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: var(--ff-primary);
 }
 
 body {
@@ -20,4 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-size: clamp(14px, 1rem - 0.8vw, 16px);
+  font-family: var(--ff-primary);
 }/*# sourceMappingURL=general.css.map */
