@@ -37,14 +37,19 @@ main > article:first-child {
 }
 
 main .cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 main .cards article {
   margin-bottom: 2em;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
-  padding: 1.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.cards article h2 {
+  margin-bottom: 0.5em;
 }
 
 .cards article:first-child {
@@ -65,6 +70,32 @@ main .cards article {
 
 .cards article img {
   display: block;
-  margin-left: 15em;
-  margin-top: 0.5em;
+  margin-left: auto;
+  margin-top: 3em;
+}
+
+@media (min-width: 48em) {
+  main > article {
+    max-width: 500px;
+    margin: auto;
+  }
+  main > article:first-child h1 {
+    font-size: 2rem;
+  }
+  main .cards {
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    -moz-column-gap: 3em;
+         column-gap: 3em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main .cards article {
+    width: 20em;
+  }
+  main .cards article:nth-child(odd) {
+    transform: translateY(50%);
+  }
 }/*# sourceMappingURL=styles.css.map */

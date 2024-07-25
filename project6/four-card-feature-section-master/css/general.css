@@ -16,7 +16,10 @@
 }
 
 body {
-  font-size: 0.938rem;
   font-family: var(--ff-poppins);
   background-color: var(--clr-very-light-gray);
+}
+
+p {
+  font-size: 15px;
 }/*# sourceMappingURL=general.css.map */
