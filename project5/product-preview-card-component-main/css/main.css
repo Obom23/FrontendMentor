@@ -1,0 +1,86 @@
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-primary: "Montserrat";
+  --ff-secondary: "Fraunces";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-white);
+  width: 85%;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.parfum-img-mobile {
+  width: 100%;
+}
+
+.lower-section {
+  padding: 1em;
+}
+
+.header {
+  margin-bottom: 0.5em;
+  font-family: var(--ff-primary);
+  letter-spacing: 0.3em;
+}
+
+.description {
+  color: var(--clr-dark-grayish-blue);
+  line-height: 1.5em;
+  width: 83%;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.main-price {
+  color: var(--clr-dark-cyan);
+  font-family: var(--ff-secondary);
+  font-size: 2em;
+  font-weight: 700;
+  margin-right: 0.3em;
+}
+
+.second-price {
+  color: var(--clr-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark-cyan);
+  font-family: var(--ff-primary);
+  font-weight: 500;
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.7em;
+  padding: 0.5em 3em;
+}
+
+.add-to-cart-btn img {
+  margin-right: 1em;
+}
+
+.parfum-img-desktop {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
