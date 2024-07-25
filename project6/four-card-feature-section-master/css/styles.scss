@@ -1,0 +1,60 @@
+@use "root";
+
+p {
+  color: var(--clr-grayish-blue);
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+h1 span {
+  font-weight: 200;
+  color: var(--clr-very-dark-blue);
+}
+
+h1,
+h2 {
+  color: var(--clr-very-dark-blue);
+}
+
+main {
+  padding: 2em;
+}
+
+main > article:first-child {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+main .cards {
+  display: flex;
+  flex-direction: column;
+}
+
+main .cards article {
+  margin-bottom: 2em;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 1.5em;
+}
+
+.cards article:first-child {
+  border-top: 5px solid var(--clr-cyan);
+}
+
+.cards article:nth-child(2) {
+  border-top: 5px solid var(--clr-red);
+}
+
+.cards article:nth-child(3) {
+  border-top: 5px solid var(--clr-orange);
+}
+
+.cards article:last-child {
+  border-top: 5px solid var(--clr-blue);
+}
+
+.cards article img {
+  display: block;
+  margin-left: 15em;
+  margin-top: 0.5em;
+}
