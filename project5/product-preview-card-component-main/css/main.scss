@@ -3,20 +3,21 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: var(--clr-white);
-  width: 85%;
   border-radius: 1em;
   overflow: hidden;
 }
 
-.parfum-img-mobile {
+.lower-section {
+  padding: 1em;
+}
+
+.img-container {
   width: 100%;
 }
 
-.lower-section {
-  padding: 1em;
+.parfum-img-mobile {
+  width: 100%;
 }
 
 .header {
@@ -28,8 +29,9 @@
 .description {
   color: var(--clr-dark-grayish-blue);
   line-height: 1.5em;
-  width: 83%;
+  max-width: 19.5em;
   margin-bottom: 0.5em;
+  font-family: var(--ff-secondary);
 }
 
 footer {
