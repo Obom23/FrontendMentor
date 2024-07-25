@@ -8,81 +8,147 @@
   --ff-secondary: "Fraunces";
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--clr-white);
-  border-radius: 1em;
-  overflow: hidden;
+@media screen and (width < 48em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+    border-radius: 1em;
+    overflow: hidden;
+  }
+  .lower-section {
+    padding: 1em;
+  }
+  .parfum-img-mobile {
+    width: 100%;
+  }
+  .header {
+    margin-bottom: 0.5em;
+    font-family: var(--ff-primary);
+    letter-spacing: 0.3em;
+  }
+  .description {
+    color: var(--clr-dark-grayish-blue);
+    line-height: 1.5em;
+    max-width: 19.5em;
+    margin-bottom: 0.5em;
+    font-family: var(--ff-secondary);
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+  }
+  .main-price {
+    color: var(--clr-dark-cyan);
+    font-family: var(--ff-secondary);
+    font-size: 2em;
+    font-weight: 700;
+    margin-right: 0.3em;
+  }
+  .second-price {
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through;
+  }
+  .add-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark-cyan);
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    color: var(--clr-white);
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.5em 3em;
+  }
+  .add-to-cart-btn img {
+    margin-right: 1em;
+  }
+  .parfum-img-desktop {
+    display: none;
+  }
 }
-
-.lower-section {
-  padding: 1em;
-}
-
-.img-container {
-  width: 100%;
-}
-
-.parfum-img-mobile {
-  width: 100%;
-}
-
-.header {
-  margin-bottom: 0.5em;
-  font-family: var(--ff-primary);
-  letter-spacing: 0.3em;
-}
-
-.description {
-  color: var(--clr-dark-grayish-blue);
-  line-height: 1.5em;
-  max-width: 19.5em;
-  margin-bottom: 0.5em;
-  font-family: var(--ff-secondary);
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.price {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5em;
-}
-
-.main-price {
-  color: var(--clr-dark-cyan);
-  font-family: var(--ff-secondary);
-  font-size: 2em;
-  font-weight: 700;
-  margin-right: 0.3em;
-}
-
-.second-price {
-  color: var(--clr-dark-grayish-blue);
-  text-decoration: line-through;
-}
-
-.add-to-cart-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--clr-dark-cyan);
-  font-family: var(--ff-primary);
-  font-weight: 500;
-  color: var(--clr-white);
-  border: none;
-  border-radius: 0.7em;
-  padding: 0.5em 3em;
-}
-
-.add-to-cart-btn img {
-  margin-right: 1em;
-}
-
-.parfum-img-desktop {
-  display: none;
+@media screen and (width >= 48em) {
+  .container {
+    display: flex;
+    background-color: var(--clr-white);
+    border-radius: 1em;
+    overflow: hidden;
+  }
+  .img-container {
+    flex: 1;
+  }
+  .parfum-img-desktop {
+    width: 100%;
+  }
+  .lower-section {
+    flex: 1;
+    padding: 3em;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: 7em;
+  }
+  .parfum-img-mobile {
+    display: none;
+  }
+  .header {
+    margin-bottom: 0.5em;
+    font-family: var(--ff-primary);
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+  }
+  .description {
+    color: var(--clr-dark-grayish-blue);
+    line-height: 1.5em;
+    max-width: 15.5em;
+    margin-bottom: 2em;
+    font-family: var(--ff-secondary);
+    font-size: 1.5rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+  .main-price {
+    color: var(--clr-dark-cyan);
+    font-family: var(--ff-secondary);
+    font-size: 3em;
+    font-weight: 700;
+    margin-right: 0.3em;
+  }
+  .second-price {
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 1.5em;
+  }
+  .add-to-cart-btn {
+    display: flex;
+    max-width: 20em;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark-cyan);
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    color: var(--clr-white);
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.5em 3em;
+  }
+  .add-to-cart-btn img {
+    margin-right: 1em;
+    width: 1em;
+  }
 }/*# sourceMappingURL=main.css.map */
