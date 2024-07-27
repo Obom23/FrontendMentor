@@ -56,62 +56,62 @@ h2 {
   border-radius: 1rem;
 }
 
-.card:first-child {
+.card-daniel {
   background-color: var(--clr-primary-moderate-violet);
   width: 52%;
 }
 
-.card:nth-child(2) {
+.card-jonathan {
   background-color: var(--clr-primary-very-dark-grayish-blue);
   width: 25%;
 }
 
-.card:nth-child(2) h2 {
+.card-jonathan h2 {
   color: var(--clr-primary-white);
 }
 
-.card:nth-child(3) {
+.card-jeanette {
   background-color: var(--clr-primary-white);
   width: 25%;
 }
 
-.card:nth-child(3) .name,
-.card:nth-child(3) h2 {
+.card-jeanette .name,
+.card-jeanette h2 {
   color: var(--clr-primary-very-dark-grayish-blue);
 }
 
-.card:nth-child(3) .graduate {
+.card-jeanette .graduate {
   color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.5);
 }
 
-.card:nth-child(3) p {
+.card-jeanette p {
   color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.7);
 }
 
-.card:nth-child(4) {
+.card-patrick {
   background-color: var(--clr-primary-very-dark-blackish-blue);
   width: 52%;
 }
 
-.card:nth-child(4) h2 {
+.card-patrick h2 {
   color: var(--clr-primary-white);
 }
 
-.card:last-child {
+.card-kira {
   background-color: var(--clr-primary-white);
   width: 25%;
 }
 
-.card:last-child .name,
-.card:last-child h2 {
+.card-kira .name,
+.card-kira h2 {
   color: var(--clr-primary-very-dark-grayish-blue);
 }
 
-.card:last-child .graduate {
+.card-kira .graduate {
   color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.5);
 }
 
-.card:last-child p {
+.card-kira p {
   color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.7);
 }
 
@@ -142,4 +142,10 @@ p,
 p {
   color: hsl(var(--clr-neutral-hsl-light-grayish-blue), 0.7);
   font-size: 1.1rem;
+}
+
+.flex {
+  display: flex;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
 }/*# sourceMappingURL=style.css.map */
