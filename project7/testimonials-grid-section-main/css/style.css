@@ -30,7 +30,6 @@ body {
   display: flex;
   -moz-column-gap: 2em;
        column-gap: 2em;
-  position: relative;
 }
 
 h2 {
@@ -52,13 +51,11 @@ h2 {
   padding: 1em 2em;
   margin-bottom: 2rem;
   border-radius: 1rem;
-  position: relative;
 }
 
 .card-daniel {
   background-color: var(--clr-primary-moderate-violet);
   flex: 2;
-  position: relative;
 }
 
 .card-jonathan {
@@ -119,6 +116,7 @@ h2 {
   color: var(--clr-primary-white);
   font-weight: 600;
   z-index: 200;
+  position: relative;
 }
 
 .name-info {
