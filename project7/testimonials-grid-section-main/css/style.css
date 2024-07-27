@@ -160,4 +160,16 @@ p {
   top: -1em;
   width: 30%;
   z-index: 100;
+}
+
+@media (max-width: 50em) {
+  .flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
