@@ -13,13 +13,14 @@ body {
 
 
 .main-container {
-  padding: 3em 5em;
+  padding: 3em 0;
   display: flex;
   column-gap: 2em;
 }
 
 h2 {
   font-size: 26px;
+  font-weight: 600;
 }
 
 .profile-header {
@@ -40,8 +41,10 @@ h2 {
 }
 
 .card-daniel {
-  background-color: var(--clr-primary-moderate-violet);
+  // background-color: var(--clr-primary-moderate-violet);
+  background-color: red;
   flex: 2;
+
 }
 
 .card-jonathan {
