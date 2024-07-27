@@ -1,0 +1,137 @@
+@use "root";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-neutral-light-grayish-blue);
+    font-family: var(--ff-primary);
+    font-size: 13px;
+}
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.main-container {
+   padding: 10em 20em;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    border: 2px solid var(--clr-light-gray);
+}
+
+.card {
+    padding: 3em;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.card:first-child {
+    background-color: var(--clr-primary-moderate-violet);
+    width: 52%;
+    
+}
+
+.card:nth-child(2) {
+    background-color: var(--clr-primary-very-dark-grayish-blue);
+    width: 25%;
+}
+
+.card:nth-child(2) h2 {
+    color: var(--clr-primary-white);
+}
+
+.card:nth-child(3) {
+    background-color: var(--clr-primary-white);
+    width: 25%;
+}
+
+.card:nth-child(3) .name, 
+.card:nth-child(3) h2 {
+    color: var(--clr-primary-very-dark-grayish-blue);
+}
+
+.card:nth-child(3) .graduate {
+    color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.5);
+}
+
+.card:nth-child(3) p {
+    color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.7);
+}
+
+.card:nth-child(4) {
+    background-color: var(--clr-primary-very-dark-blackish-blue);
+    width: 52%;
+}
+
+.card:nth-child(4) h2 {
+    color: var(--clr-primary-white);
+}
+
+
+.card:last-child {
+    background-color: var(--clr-primary-white);
+    width: 25%;
+}
+
+.card:last-child .name,
+.card:last-child h2 {
+    color: var(--clr-primary-very-dark-grayish-blue);
+}
+
+.card:last-child .graduate {
+    color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.5);
+}
+
+.card:last-child p {
+    color: hsl(var(--clr-primary-hsl-very-dark-grayish-blue), 0.7);
+}
+
+
+.main-container h1 {
+    color: var(--clr-primary-white);
+    font-weight: 600;
+}
+
+.name-info {
+    margin-left: 1em;
+}
+
+.name {
+    color: var(--clr-neutral-light-grayish-blue);
+    font-weight: 600;
+}
+
+p,
+.graduate {
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.graduate {
+    color: hsl(var(--clr-neutral-hsl-light-grayish-blue), 0.5);
+
+}
+
+p {
+    color: hsl(var(--clr-neutral-hsl-light-grayish-blue), 0.7);
+    font-size: 1.1rem;
+}
+

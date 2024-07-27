@@ -1,8 +1,16 @@
 :root {
-  --clr-moderate-violet: hsl(263, 55%, 52%);
-  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --clr-very-dark-blackish-blue: hsl(219, 29%, 14%);
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-light-gray: hsl(0, 0%, 81%);
-  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+  --clr-primary-hsl-moderate-violet: 263, 55%, 52%;
+  --clr-primary-hsl-very-dark-grayish-blue: 217, 19%, 35%;
+  --clr-primary-hsl-very-dark-blackish-blue: 219, 29%, 14%;
+  --clr-primary-hsl-white: 0, 0%, 100%;
+  --clr-neutral-hsl-light-gray: 0, 0%, 81%;
+  --clr-neutral-hsl-light-grayish-blue: 210, 46%, 95%;
+  /* HSL-Farben unter Verwendung von var() */
+  --clr-primary-moderate-violet: hsl(var(--clr-primary-hsl-moderate-violet));
+  --clr-primary-very-dark-grayish-blue: hsl(var(--clr-primary-hsl-very-dark-grayish-blue));
+  --clr-primary-very-dark-blackish-blue: hsl(var(--clr-primary-hsl-very-dark-blackish-blue));
+  --clr-primary-white: hsl(var(--clr-primary-hsl-white));
+  --clr-neutral-light-gray: hsl(var(--clr-neutral-hsl-light-gray));
+  --clr-neutral-light-grayish-blue: hsl(var(--clr-neutral-hsl-light-grayish-blue));
+  --ff-primary: "Barlow Semi Condensed";
 }/*# sourceMappingURL=root.css.map */
