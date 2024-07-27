@@ -8,6 +8,10 @@ body {
   background-color: var(--clr-neutral-light-grayish-blue);
   font-family: var(--ff-primary);
   font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 
@@ -41,7 +45,7 @@ h2 {
 }
 
 .card-daniel {
-  background-color: red;
+  background-color: var(--clr-primary-moderate-violet);
   flex: 2;
 
 }
