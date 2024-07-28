@@ -30,7 +30,7 @@ body {
 }
 
 .main-container {
-  padding: 3em 0;
+  padding: 3em 18em;
   display: flex;
   -moz-column-gap: 2em;
        column-gap: 2em;
