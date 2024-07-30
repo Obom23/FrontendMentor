@@ -1,0 +1,132 @@
+:root {
+  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+
+  --ff-primary: "Manrope";
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 0.813rem;
+  background-color: var(--clr-light-grayish-blue);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-family: var(--ff-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.product {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product__info {
+  padding: 1.7em;
+  line-height: 1.7em;
+}
+
+.product__title {
+  color: var(--clr-very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+}
+
+.product__description {
+  color: var(--clr-desaturated-dark-blue);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.author__img {
+  width: 3em;
+  height: 3em;
+  border-radius: 100em;
+}
+
+.author__name {
+  font-weight: var(--fw-bold);
+  color: var(--clr-very-dark-grayish-blue);
+  line-height: 1.4em;
+}
+
+.author__name span {
+  color: var(--clr-desaturated-dark-blue);
+  font-size: 0.7rem;
+}
+
+.author__share-button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1em;
+  border-radius: 50%;
+  background-color: var(--clr-grayish-blue);
+  z-index: 100;
+}
+
+/* .author__share-button img {
+  filter: brightness(100);
+} */
+
+.product__bottom {
+  position: relative;
+}
+
+#overlay {
+  display: none;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--clr-very-dark-grayish-blue);
+  left: -1.8em;
+  right: -1.8em;
+  bottom: -2em;
+  top: 0.2em;
+  position: absolute;
+}
+
+#overlay p {
+  text-transform: uppercase;
+  letter-spacing: 0.8em;
+  font-size: 0.8em;
+  font-weight: var(--fw-bold);
+  color: var(--clr-grayish-blue);
+  margin-left: 3em;
+}
+
+.fb {
+  width: 20px;
+  height: 20px;
+}
+
+.twitter {
+  width: 20px;
+  height: 17px;
+}
