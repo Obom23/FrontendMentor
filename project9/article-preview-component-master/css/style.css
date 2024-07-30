@@ -24,6 +24,7 @@ body {
   place-content: center;
   height: 100vh;
   font-family: var(--ff-primary);
+  position: relative;
 }
 
 img {
@@ -38,6 +39,7 @@ img {
   border-radius: 1em;
   overflow: hidden;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .product__info {
@@ -92,10 +94,6 @@ img {
   z-index: 100;
 }
 
-/* .author__share-button img {
-  filter: brightness(100);
-} */
-
 .product__bottom {
   position: relative;
 }
@@ -129,4 +127,45 @@ img {
 .twitter {
   width: 20px;
   height: 17px;
+}
+
+@media screen and (min-width: 600px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 945px;
+    overflow: visible;
+  }
+
+  #overlay {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: -3em;
+    background-color: var(--clr-very-dark-grayish-blue);
+    left: 15em;
+    right: -5em;
+    bottom: 2em;
+    top: -3em;
+    position: absolute;
+    padding: 0;
+    height: 4em;
+    width: 20em;
+    z-index: 100;
+    border-radius: 1em;
+  }
+
+  #overlay p {
+    text-transform: uppercase;
+    letter-spacing: 0.8em;
+    font-size: 0.8em;
+    font-weight: var(--fw-bold);
+    color: var(--clr-grayish-blue);
+    margin-left: 0;
+  }
+
+  #overlay img {
+    margin-left: -5em;
+    padding: 0;
+  }
 }
