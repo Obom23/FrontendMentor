@@ -1,0 +1,40 @@
+:root {
+  --clr-primary: hsl(4, 100%, 67%);
+
+  --clr-neutral-400: hsl(234, 29%, 20%);
+  --clr-neutral-300: hsl(235, 18%, 26%);
+  --clr-neutral-200: hsl(231, 7%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-primary: "Roboto";
+
+  --fw-medium: 400;
+  --fw-bold: 700;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+}
+
+picture,
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.newsletter {
+  display: grid;
+  padding: 1em;
+}
+
+.newsletter__title {
+  font-size: 2rem;
+}
