@@ -11,15 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
+    <script defer src="scripts/script.js"></script>
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+      href="./assets/images/favicon-32x32.png" />
 
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
@@ -27,36 +26,52 @@
   </head>
   <body>
     <!-- Sign-up form start -->
-    <header class="header">
-      <picture>
+    <card class="newsletter" id="newsletter">
+      <picture class="img-container">
+        <source
+          media="(min-width:600px)"
+          srcset="assets/images/illustration-sign-up-desktop.svg" />
         <img src="assets/images/illustration-sign-up-mobile.svg" alt="" />
       </picture>
-    </header>
-    <main class="main">
-      <article class="newsletter">
-        <h1 class="newsletter__title">Stay updated!</h1>
+      <div class="newsletter__description">
+        <h1 class="newsletter__title" id="newsletter-title">Stay updated!</h1>
         <p class="newsletter__text">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
         <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
+          <li>
+            <span>Product discovery and building what matters</span>
+          </li>
+          <li>
+            <span>Measuring to ensure updates are a success</span>
+          </li>
+          <li>
+            <span>And much more!</span>
+          </li>
         </ul>
-        <h4 class="newsletter__email">Email address</h4>
-        <input class="input" placeholder="email@company.com" />
-        <button>Subscribe to monthly newsletter</button>
 
-        <!-- Sign-up form end -->
-
-        <!-- Success message start -->
-
-        <!-- Thanks for subscribing! A confirmation email has been sent to
-        ash@loremcompany.com. Please open it and click the button inside to
-        confirm your subscription. Dismiss message -->
-
-        <!-- Success message end -->
-      </article>
-    </main>
+        <form class="form" id="form" novalidate>
+          <label class="email" for="email">Email address</label>
+          <input
+            class="input-email"
+            type="email"
+            id="email"
+            placeholder="email@company.com" />
+          <button class="submit-button" type="submit">
+            Subscribe to Monthly Newsletter
+          </button>
+        </form>
+      </div>
+    </card>
+    <div class="newsletter-2 hide" id="newsletter-2">
+      <img class="success-img" src="./assets/images/icon-success.svg" alt="" />
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span>ash@loremcompany.com.</span>
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dissmiss-button">Dismiss message</button>
+    </div>
   </body>
 </html>
