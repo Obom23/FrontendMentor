@@ -26,47 +26,49 @@
   </head>
   <body>
     <!-- Sign-up form start -->
-    <card class="newsletter" id="newsletter">
-      <picture class="img-container">
-        <source
-          media="(max-width:700px)"
-          srcset="assets/images/illustration-sign-up-mobile.svg" />
-        <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
-      </picture>
-      <div class="newsletter__description">
-        <h1 class="newsletter__title" id="newsletter-title">Stay updated!</h1>
-        <p class="newsletter__text">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul>
-          <li>
-            <span>Product discovery and building what matters</span>
-          </li>
-          <li>
-            <span>Measuring to ensure updates are a success</span>
-          </li>
-          <li>
-            <span>And much more!</span>
-          </li>
-        </ul>
+    <main>
+      <card class="newsletter" id="newsletter">
+        <picture class="img-container">
+          <source
+            media="(max-width:700px)"
+            srcset="assets/images/illustration-sign-up-mobile.svg" />
+          <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
+        </picture>
+        <div class="newsletter__description">
+          <h1 class="newsletter__title" id="newsletter-title">Stay updated!</h1>
+          <p class="newsletter__text">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul>
+            <li>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li>
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li>
+              <span>And much more!</span>
+            </li>
+          </ul>
 
-        <form class="form" id="form" novalidate>
-          <div class="flex-group">
-            <label class="email" for="email">Email address</label>
-            <label class="error hide" for="email">Valid email required</label>
-          </div>
-          <input
-            class="input-email"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email@company.com" />
-          <button class="submit-button" type="submit">
-            Subscribe to Monthly Newsletter
-          </button>
-        </form>
-      </div>
-    </card>
+          <form class="form" id="form" novalidate>
+            <div class="flex-group">
+              <label class="email" for="email">Email address</label>
+              <label class="error hide" for="email">Valid email required</label>
+            </div>
+            <input
+              class="input-email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com" />
+            <button class="submit-button" type="submit">
+              Subscribe to Monthly Newsletter
+            </button>
+          </form>
+        </div>
+      </card>
+    </main>
     <div class="newsletter-2 hide" id="newsletter-2">
       <img class="success-img" src="./assets/images/icon-success.svg" alt="" />
       <h1>Thanks for subscribing!</h1>
