@@ -5,6 +5,7 @@ const newsletter = document.getElementById('newsletter')
 const newsletter_2 = document.getElementById('newsletter-2')
 const errorMessage = document.querySelector('.error')
 const inputEmail = document.getElementById('email')
+const customizedMail = document.querySelector('.customized-email')
 
 form.addEventListener('submit', handleSubmit)
 
@@ -18,7 +19,12 @@ function handleSubmit(e) {
 
   const data = Object.fromEntries(new FormData(e.target))
 
-  validateEmail(data.email) ? showSuccess() : showError()
+  if (validateEmail(data.email)) {
+    customizedMail.textContent = data.email
+    showSuccess()
+    return
+  }
+  showError()
 }
 
 function validateEmail(email) {
