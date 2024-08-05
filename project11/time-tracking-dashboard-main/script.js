@@ -1,59 +1,32 @@
-const sectionDaily = document.querySelectorAll('.daily')
-const sectionWeekly = document.querySelectorAll('.weekly')
-const sectionMonthly = document.querySelectorAll('.monthly')
-const dailyButton = document.querySelector('.flex-group__daily')
-const weeklyButton = document.querySelector('.flex-group__weekly')
-const monthlyButton = document.querySelector('.flex-group__monthly')
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = {
+    daily: document.querySelectorAll('.daily'),
+    weekly: document.querySelectorAll('.weekly'),
+    monthly: document.querySelectorAll('.monthly')
+  }
 
-dailyButton.addEventListener('click', () => {
-  sectionWeekly.forEach((x) => {
-    x.classList.add('hide')
-  })
-  sectionDaily.forEach((x) => {
-    x.classList.remove('hide')
-  })
+  const buttons = {
+    daily: document.querySelector('.flex-group__daily'),
+    weekly: document.querySelector('.flex-group__weekly'),
+    monthly: document.querySelector('.flex-group__monthly')
+  }
 
-  sectionMonthly.forEach((x) => {
-    x.classList.add('hide')
-  })
+  function handleButtonClick(activeSection) {
+    Object.keys(sections).forEach((section) => {
+      sections[section].forEach((element) => {
+        if (section === activeSection) {
+          element.classList.remove('hide')
+        } else {
+          element.classList.add('hide')
+        }
+      })
 
-  dailyButton.style.color = 'white'
-  weeklyButton.style.color = 'hsl(235, 45%, 61%)'
-  monthlyButton.style.color = 'hsl(235, 45%, 61%)'
+      buttons[section].style.color =
+        section === activeSection ? 'white' : 'hsl(235, 45%, 61%)'
+    })
+  }
+
+  buttons.daily.addEventListener('click', () => handleButtonClick('daily'))
+  buttons.weekly.addEventListener('click', () => handleButtonClick('weekly'))
+  buttons.monthly.addEventListener('click', () => handleButtonClick('monthly'))
 })
-
-weeklyButton.addEventListener('click', () => {
-  sectionWeekly.forEach((x) => {
-    x.classList.remove('hide')
-  })
-  sectionDaily.forEach((x) => {
-    x.classList.add('hide')
-  })
-
-  sectionMonthly.forEach((x) => {
-    x.classList.add('hide')
-  })
-
-  weeklyButton.style.color = 'white'
-  dailyButton.style.color = 'hsl(235, 45%, 61%)'
-  monthlyButton.style.color = 'hsl(235, 45%, 61%)'
-})
-
-monthlyButton.addEventListener('click', () => {
-  sectionWeekly.forEach((x) => {
-    x.classList.add('hide')
-  })
-  sectionDaily.forEach((x) => {
-    x.classList.add('hide')
-  })
-
-  sectionMonthly.forEach((x) => {
-    x.classList.remove('hide')
-  })
-
-  monthlyButton.style.color = 'white'
-  dailyButton.style.color = 'hsl(235, 45%, 61%)'
-  weeklyButton.style.color = 'hsl(235, 45%, 61%)'
-})
-
-function hideElements() {}
