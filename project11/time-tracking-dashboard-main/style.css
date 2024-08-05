@@ -99,7 +99,7 @@ body p {
 
 .profile__name {
   font-size: 1.5rem;
-  font-weight: white;
+  color: white;
   font-weight: var(--fw-300);
 }
 
@@ -236,6 +236,10 @@ body p {
   background-color: var(--clr-neutral-290);
 }
 
+.hide {
+  display: none;
+}
+
 @media (min-width: 600px) {
   body {
     display: grid;
@@ -266,7 +270,6 @@ body p {
     flex-direction: column;
     gap: 0;
     padding: 1em 1.5em;
-    flex-wrap: wrap;
   }
 
   .flex-group {
