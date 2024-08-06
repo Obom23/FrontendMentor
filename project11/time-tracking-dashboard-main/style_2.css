@@ -119,21 +119,13 @@ body p {
 }
 
 a:link {
-  color: var(--clr-primary-200);
   text-decoration: none;
 }
 
-/* visited link */
-a:visited {
-  color: var(--clr-primary-200);
-}
-
-/* mouse over link */
 a:hover {
   color: white;
 }
 
-/* selected link */
 a:active {
   color: white;
 }
