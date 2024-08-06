@@ -236,7 +236,7 @@ a:active {
   display: none;
 }
 
-.activated:visited:not(:hover) {
+.activated {
   color: white;
 }
 
