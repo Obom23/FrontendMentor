@@ -1,6 +1,7 @@
 const inputBill = document.getElementById('input1');
 const inputNumberPeople = document.getElementById('input2');
 const inputButton = document.getElementById('input-button');
+const allInputFields = document.querySelectorAll('input');
 const flex1 = document.getElementById('flex1');
 const flex2 = document.getElementById('flex2');
 const tipAmount = document.createElement('p');
@@ -15,6 +16,20 @@ flex2.appendChild(tipTotal);
 
 const tipButtons = document.getElementById('tip-buttons').children;
 const reset = document.getElementById('reset');
+
+Array.from(allInputFields).forEach((field) => {
+  console.log(reset);
+  field.addEventListener('input', () => {
+    console.log('I am here');
+    console.log('Field: ', field.value);
+    if (field.value === '') {
+      reset.classList.remove('not-empty-reset');
+      console.log(reset);
+    } else {
+      reset.classList.add('not-empty-reset');
+    }
+  });
+});
 
 reset.addEventListener('click', () => {
   tipAmount.textContent = '$0.00';

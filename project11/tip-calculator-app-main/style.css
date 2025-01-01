@@ -187,13 +187,6 @@ button {
   display: block;
 }
 
-.inner-container > button {
-  background-color: #26c2ae;
-  color: #00474b;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 .inner-container .tipnode {
   font-size: 1.5rem;
   color: #26c2ae;
@@ -202,4 +195,17 @@ button {
 .grid > button.clicked {
   background-color: #26c2ae;
   color: #00474b;
+}
+
+.reset-button {
+  background-color: #0d686d;
+  color: #00474b;
+  font-size: 20px;
+  text-transform: uppercase;
+  opacity: 0.35;
+}
+
+.not-empty-reset {
+  background-color: #26c2ae;
+  opacity: 1;
 }
