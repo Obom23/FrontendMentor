@@ -17,6 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet" />
 
+    <script defer src="./script.js"></script>
+
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -37,13 +39,17 @@
           aria-label="Enter bill amount" />
       </div>
       <p class="select-tip">Select Tip %</p>
-      <div class="grid">
+      <div id="tip-buttons" class="grid">
         <button id="5">5%</button>
         <button id="10">10%</button>
         <button id="15">15%</button>
         <button id="25">25%</button>
         <button id="50">50%</button>
-        <button id="custom">Custom</button>
+        <input
+          id="custom"
+          class="input-button"
+          type="number"
+          placeholder="custom" />
       </div>
       <div class="number-people">
         <p class="number-people__title">Number of People</p>
@@ -55,19 +61,19 @@
           aria-label="Enter number of people" />
       </div>
       <div class="inner-container">
-        <div class="flex1">
+        <div id="flex1" class="flex1">
           <p>
             Tip Amount
             <span>/ person</span>
           </p>
         </div>
-        <div class="flex2">
+        <div id="flex2" class="flex2">
           <p>
             Total
             <span>/ person</span>
           </p>
         </div>
-        <button class="reset">Reset</button>
+        <button id="reset" class="reset">Reset</button>
       </div>
     </main>
   </body>
