@@ -1,111 +1,116 @@
-const inputBill = document.getElementById('input1');
-const inputNumberPeople = document.getElementById('input2');
-const inputButton = document.getElementById('input-button');
-const allInputFields = document.querySelectorAll('input');
-const flex1 = document.getElementById('flex1');
-const flex2 = document.getElementById('flex2');
-const tipAmount = document.createElement('p');
-tipAmount.textContent = '$0.00';
-tipAmount.className = 'tipnode';
-const tipTotal = document.createElement('p');
-tipTotal.textContent = '$0.00';
-tipTotal.className = 'tipnode';
-const errorMessage = document.getElementById('error-message');
+(function () {
+  const billInput = document.getElementById('input1');
+  const peopleInput = document.getElementById('input2');
+  const customTipInput = document.getElementById('input-button');
+  const resetButton = document.getElementById('reset');
+  const allInputs = document.querySelectorAll('input');
+  const tipButtons = Array.from(
+    document.getElementById('tip-buttons').children
+  );
+  const errorMessage = document.getElementById('error-message');
+  const tipDisplay = createDisplayElement('flex1', '$0.00');
+  const totalDisplay = createDisplayElement('flex2', '$0.00');
 
-flex1.appendChild(tipAmount);
-flex2.appendChild(tipTotal);
-
-const tipButtons = document.getElementById('tip-buttons').children;
-const reset = document.getElementById('reset');
-
-Array.from(allInputFields).forEach((field) => {
-  field.addEventListener('input', () => {
-    if (field.value === '') {
-      reset.classList.remove('not-empty-reset');
-    } else {
-      reset.classList.add('not-empty-reset');
-    }
+  allInputs.forEach((field) => {
+    field.addEventListener('input', handleFieldInput);
   });
-});
 
-reset.addEventListener('click', () => {
-  tipAmount.textContent = '$0.00';
-  tipTotal.textContent = '$0.00';
-  inputBill && (inputBill.value = '');
-  inputNumberPeople && (inputNumberPeople.value = '');
-  inputButton && (inputButton.value = '');
-  reset.classList.remove('not-empty-reset');
-  Array.from(tipButtons).forEach((button) => {
-    button.classList.remove('clicked');
+  resetButton.addEventListener('click', handleReset);
+
+  tipButtons.forEach((button) => {
+    button.addEventListener('click', () => handleTipButtonClick(button));
   });
-});
 
-Array.from(tipButtons).forEach((button) => {
-  button.addEventListener('click', () => {
-    const validate = validateInput(inputBill.value, inputNumberPeople.value);
+  function handleFieldInput() {
+    const anyFieldHasValue = Array.from(allInputs).some(
+      (input) => input.value !== ''
+    );
+    resetButton.classList.toggle('not-empty-reset', anyFieldHasValue);
+  }
 
-    if (validate !== 0) {
+  function handleReset() {
+    updateDisplay(tipDisplay, '$0.00');
+    updateDisplay(totalDisplay, '$0.00');
+
+    clearInputs(billInput, peopleInput, customTipInput);
+
+    tipButtons.forEach((button) => button.classList.remove('clicked'));
+
+    resetButton.classList.remove('not-empty-reset');
+  }
+
+  function handleTipButtonClick(button) {
+    if (validateInputs(billInput.value, peopleInput.value)) {
       return;
     }
 
-    errorMessage.classList.add('error-message-hidden');
-    inputNumberPeople.classList.remove('error');
+    toggleErrorState(false);
 
+    tipButtons.forEach((btn) => btn.classList.remove('clicked'));
     button.classList.add('clicked');
 
-    const { tip, total } = applyTip(
-      button,
-      inputNumberPeople.value,
-      inputBill.value
+    const { tip, total } = calculateTipAndTotal(
+      parseFloat(billInput.value),
+      parseFloat(button.value || convertTextToTipPercent(button.textContent)),
+      parseInt(peopleInput.value, 10)
     );
-    tipAmount.textContent = `$${tip}`;
-    tipTotal.textContent = `$${total}`;
 
-    inputBill.value = '';
-    inputNumberPeople.value = '';
-    button.value = '';
-  });
-});
+    updateDisplay(tipDisplay, `$${tip.toFixed(2)}`);
+    updateDisplay(totalDisplay, `$${total.toFixed(2)}`);
 
-function applyTip(button, numberOfPeople, billValue) {
-  const value = parseFloat(billValue);
-  let result = 0;
-
-  if (button.textContent === '5%') {
-    result = value * 0.05;
-  } else if (button.textContent === '10%') {
-    result = value * 0.1;
-  } else if (button.textContent === '15%') {
-    result = value * 0.15;
-  } else if (button.textContent === '20%') {
-    result = value * 0.2;
-  } else if (button.textContent === '25%') {
-    result = value * 0.25;
-  } else if (button.textContent === '50%') {
-    result = value * 0.5;
-  } else {
-    result = value * (button.value / 100);
+    clearInputs(billInput, peopleInput, customTipInput);
   }
 
-  const tip = result / numberOfPeople;
-  const total = (value + result) / numberOfPeople;
-
-  return {
-    tip: tip.toFixed(2),
-    total: total.toFixed(2)
-  };
-}
-
-function validateInput(input1, input2) {
-  if (input1 === '') {
-    return 1;
+  function createDisplayElement(containerId, defaultText) {
+    const container = document.getElementById(containerId);
+    const displayElement = document.createElement('p');
+    displayElement.className = 'tipnode';
+    displayElement.textContent = defaultText;
+    container.appendChild(displayElement);
+    return displayElement;
   }
 
-  if (input2 < 1) {
-    errorMessage.classList.remove('error-message-hidden');
-    inputNumberPeople.classList.add('error');
-    return 1;
+  function updateDisplay(element, text) {
+    element.textContent = text;
   }
 
-  return 0;
-}
+  function validateInputs(bill, people) {
+    if (!bill) {
+      return true;
+    }
+
+    if (people < 1) {
+      toggleErrorState(true);
+      return true;
+    }
+
+    return false;
+  }
+
+  function toggleErrorState(showError) {
+    if (showError) {
+      errorMessage.classList.remove('error-message-hidden');
+      peopleInput.classList.add('error');
+    } else {
+      errorMessage.classList.add('error-message-hidden');
+      peopleInput.classList.remove('error');
+    }
+  }
+
+  function convertTextToTipPercent(text) {
+    return parseFloat(text) || 0;
+  }
+
+  function calculateTipAndTotal(billValue, tipPercent, numberOfPeople) {
+    const tipTotal = billValue * (tipPercent / 100);
+    const tipPerPerson = tipTotal / numberOfPeople;
+    const totalPerPerson = (billValue + tipTotal) / numberOfPeople;
+    return { tip: tipPerPerson, total: totalPerPerson };
+  }
+
+  function clearInputs(input1, input2, input3) {
+    input1 && (input1.value = '');
+    input2 && (input2.value = '');
+    input3 && (input3.value = '');
+  }
+})();
