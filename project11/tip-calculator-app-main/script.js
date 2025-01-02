@@ -10,6 +10,7 @@ tipAmount.className = 'tipnode';
 const tipTotal = document.createElement('p');
 tipTotal.textContent = '$0.00';
 tipTotal.className = 'tipnode';
+const errorMessage = document.getElementById('error-message');
 
 flex1.appendChild(tipAmount);
 flex2.appendChild(tipTotal);
@@ -18,13 +19,9 @@ const tipButtons = document.getElementById('tip-buttons').children;
 const reset = document.getElementById('reset');
 
 Array.from(allInputFields).forEach((field) => {
-  console.log(reset);
   field.addEventListener('input', () => {
-    console.log('I am here');
-    console.log('Field: ', field.value);
     if (field.value === '') {
       reset.classList.remove('not-empty-reset');
-      console.log(reset);
     } else {
       reset.classList.add('not-empty-reset');
     }
@@ -37,6 +34,7 @@ reset.addEventListener('click', () => {
   inputBill && (inputBill.value = '');
   inputNumberPeople && (inputNumberPeople.value = '');
   inputButton && (inputButton.value = '');
+  reset.classList.remove('not-empty-reset');
   Array.from(tipButtons).forEach((button) => {
     button.classList.remove('clicked');
   });
@@ -44,9 +42,16 @@ reset.addEventListener('click', () => {
 
 Array.from(tipButtons).forEach((button) => {
   button.addEventListener('click', () => {
-    if (inputBill.value === '' || inputNumberPeople.value === '') {
+    const validate = validateInput(inputBill.value, inputNumberPeople.value);
+
+    if (validate !== 0) {
       return;
     }
+
+    errorMessage.classList.add('error-message-hidden');
+    inputNumberPeople.classList.remove('error');
+
+    button.classList.add('clicked');
 
     const { tip, total } = applyTip(
       button,
@@ -89,4 +94,18 @@ function applyTip(button, numberOfPeople, billValue) {
     tip: tip.toFixed(2),
     total: total.toFixed(2)
   };
+}
+
+function validateInput(input1, input2) {
+  if (input1 === '') {
+    return 1;
+  }
+
+  if (input2 < 1) {
+    errorMessage.classList.remove('error-message-hidden');
+    inputNumberPeople.classList.add('error');
+    return 1;
+  }
+
+  return 0;
 }

@@ -53,7 +53,12 @@
             placeholder="custom" />
         </div>
         <div class="number-people">
-          <p class="number-people__title">Number of People</p>
+          <div class="number-people__box">
+            <p class="number-people__title">Number of People</p>
+            <p id="error-message" class="error-message error-message-hidden">
+              Can't be zero
+            </p>
+          </div>
           <input
             id="input2"
             type="number"

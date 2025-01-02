@@ -58,6 +58,7 @@ body {
   background-color: var(--clr-neutral-300);
   font-family: var(--ff-primary);
   font-size: 1rem;
+  min-width: 200px;
 }
 
 header {
@@ -89,7 +90,8 @@ p {
   font-weight: var(--fw-bold);
   font-size: 1rem;
 }
-.bill__title {
+.bill__title,
+.number-people__title {
   margin-bottom: 0.5em;
 }
 
@@ -114,10 +116,6 @@ input:focus {
 
 .bill__input {
   background-image: url('images/icon-dollar.svg');
-}
-
-.number-people__title {
-  margin-bottom: 0.5em;
 }
 
 .number-people__input {
@@ -150,6 +148,12 @@ button {
   padding: 0.5em 0.8em;
   cursor: pointer;
   font-family: var(--ff-primary);
+  transition: 0.15s;
+}
+
+button:hover {
+  background-color: #9fe8df;
+  color: var(--clr-neutral-600);
 }
 
 .input-button {
@@ -208,9 +212,71 @@ button {
   font-size: 1rem;
   text-transform: uppercase;
   opacity: 0.35;
+  transition: 0.15s;
 }
 
 .not-empty-reset {
   background-color: #26c2ae;
   opacity: 1;
+}
+
+[class='reset-button not-empty-reset']:hover {
+  background-color: #9fe8df;
+  color: var(--clr-neutral-600);
+}
+
+.number-people__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: #e17457;
+}
+
+.error-message-hidden {
+  display: none;
+}
+
+.error {
+  border: 3px solid #e17457;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4em;
+  }
+
+  .bill__title,
+  .number-people__title,
+  input {
+    margin-bottom: 1em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    max-width: 800px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8em;
+    margin-bottom: 1em;
+  }
+
+  .inner-container {
+    gap: 2em;
+  }
+
+  .inner-container > button {
+    margin-top: auto;
+  }
 }
